@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>정수, 실수자르기</title>
+</head>
+
+<body>
+  <script>
+    var int = function (num) {
+      var string = String(num)
+      var dotPosition = string.indexOf('.');
+      var splited = string.slice(dotPosition + 1)
+      var pre = string.slice(0, dotPosition)
+      document.write(pre, '<br>', splited);
+    };
+    int(1.414213);
+  </script>
+</body>
+
+</html>
