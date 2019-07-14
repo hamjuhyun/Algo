@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>문자를 분할</title>
+</head>
+
+<body>
+  <script>
+    var detachFn = function (num) {
+      var man = 10000;
+      var chen = 1000;
+      var bak = 100;
+      var sip = 10;
+      var chenNum;
+      // console.log(num)
+      if (num / man) {
+        var manNum = Math.floor(num / man) * man;
+        chenNum = num - manNum;
+        // console.log(chenNum);
+      }
+      if (chenNum) {
+        var chenNum = Math.floor(chenNum / chen) * chen;
+        bakNum = manNum - chenNum;
+        console.log(bakNum)
+      }
+    }
+    detachFn(75254);
+  </script>
+</body>
+
+</html>
