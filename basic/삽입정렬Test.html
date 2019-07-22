@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>선택 정렬</title>
+</head>
+
+<body>
+  <script>
+    function sort(arr) {
+      for (var a = 0; a < arr.length; a++) {
+        for (var i = a + 1; i < arr.length; i++) {
+          if (arr[a] > arr[i]) {
+            var temp = arr[a]
+            arr[a] = arr[i]
+            arr[i] = temp;
+          }
+        }
+      }
+      console.log(arr);
+    }
+    sort([5, 3, 2]);
+  </script>
+</body>
+
+</html>

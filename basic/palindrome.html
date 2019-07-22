@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>팰린드롬</title>
+</head>
+
+<body>
+  <script>
+    function palindrome(str) {
+      for (var i = 1; i <= str.length; i++) {
+        // console.log(str[i - 1]);
+        // console.log(str[str.length - i])
+        if (str[i - 1] === str[str.length - i]) {
+          console.log("palindrome");
+        } else {
+          console.log("Not!!!!! palindrome");
+        }
+      }
+    }
+    // palindrome("eye")
+    // palindrome("racecar")
+    // palindrome("eyeasdlkfjasd;lfjk")
+  </script>
+  <script>
+    function palindrome(str) {
+      var reg = /[\W_]/g;
+      var smallStr = str.toLowerCase().replace(reg, "");
+      var reversed = smallStr.split("").reverse().join("");
+      console.log(reversed)
+      if (reversed === str) {
+        return true
+      } else {
+        return false
+      }
+    }
+    palindrome('racecaR');
+  </script>
+</body>
+
+</html>

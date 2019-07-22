@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stacks</title>
+</head>
+
+<body>
+  <script>
+    var Stack = function () {
+      this.count = 0;
+      this.storage = {};
+      this.push = function (value) {
+        this.storage[this.count] = value;
+        this.count++;
+      }
+      this.pop = function () {
+        if (this.count === 0) {
+          return undefined;
+        }
+        this.count--;
+        var result = this.storage[this.count];
+        delete this.storage[this.count];
+        return result;
+      }
+      this.size = function () {
+        return this.count;
+      }
+      this.peek = function (value) {
+        return this.storage[this.count - 1];
+      }
+    }
+    var stack = new Stack();
+    stack.push(1);
+    stack.push(2);
+    console.log(stack.peek()); //2
+    console.log(stack.pop()); //2
+    console.log(stack.peek()); //1
+    myStack.push('hamjuhyun');
+    console.log(stack.size()); //2
+    console.log(stack.peek()) //hamjuhyun
+    console.log(stack.pop()) //hamjuhyun
+    console.log(stack.peek()) //1
+  </script>
+</body>
+
+</html>

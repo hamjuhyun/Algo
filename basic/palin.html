@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>팰린드롬</title>
+</head>
+
+<body>
+  <!-- <script>
+    function palin(word) {
+      if (word.split('').reverse().join('') === word) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+    }
+    palin('기러기들');
+    palin('기러기');
+  </script> -->
+  <script>
+    function palin(word) {
+      for (var i = word.length; i >= 0; i--) {
+        console.log(word[i])
+      }
+    }
+    palin('기러기');
+  </script>
+</body>
+
+</html>

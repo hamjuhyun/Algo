@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>아무거나</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<style>
+  .box {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background: orange;
+  }
+</style>
+
+<body>
+  <div class="box">이광수대리님</div>
+  <script>
+    ;
+    (function ($) {
+      var box = $('.box');
+      box.html('광수대리님ㅋㅋㅋㅋㅋ');
+      box.mouseenter(function () {
+        $(this).css("background", "red");
+      });
+    })(jQuery);
+  </script>
+</body>
+
+</html>

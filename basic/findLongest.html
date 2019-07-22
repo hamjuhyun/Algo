@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>longestWord</title>
+</head>
+
+<body>
+  <script>
+    // function findLongestWord(str) {
+    //   var splitted = str.split(" ");
+    //   // splitted.charAt(0);
+    //   for (var i = 0; i < str.length; i++) {
+    //     var longest = splitted[0].length;
+    //     if (longest < splitted[i].length) {
+    //       longest = splitted[i];
+    //       console.log(longest);
+    //     }
+    //   }
+    // }
+    // findLongestWord("The quick brown fox jumped over the lazy dog");
+  </script>
+  <script>
+    function findLongestWord(str) {
+      console.log(str.split(" ").sort(function (a, b) {
+        return b.length - a.length
+      })[0]);
+      //와우우우우우우 개신기해!!!!!!!!!!
+    }
+    findLongestWord("The quick brown fox jumped over the lazy dog");
+  </script>
+</body>
+
+</html>

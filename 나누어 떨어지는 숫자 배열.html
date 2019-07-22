@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>나누어 떨어지는 숫자배열</title>
+</head>
+
+<body>
+  <script>
+    function solution(arr, divisor) {
+      var answer = arr.filter(function (ele) {
+        if (ele % divisor === 0) {
+          return answer = ele;
+        }
+      });
+      answer.length ? answer.sort((p, c) => p - c) : [-1];
+      console.log(answer);
+    }
+    solution([5, 9, 7, 10], 5)
+    solution([2, 36, 3, 1], 1)
+  </script>
+</body>
+
+</html>

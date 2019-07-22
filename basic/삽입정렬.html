@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>선택 정렬</title>
+</head>
+
+<body>
+  <script>
+    function sort(arr) {
+      // if (arr[0] > arr[1]) {
+      //   temp = arr[0];
+      //   arr[0] = arr[1];
+      //   arr[1] = temp;
+      // }
+      // if (arr[0] > arr[2]) {
+      //   temp = arr[0];
+      //   arr[0] = arr[2];
+      //   arr[2] = temp;
+      // }
+      for (var s = 0; s < arr.length; s++) {
+        for (var i = s + 1; i < arr.length; i++) {
+          if (arr[s] > arr[i]) {
+            temp = arr[s];
+            arr[s] = arr[i];
+            arr[i] = temp;
+          }
+        }
+      }
+      // if (arr[1] > arr[2]) {
+      //   temp = arr[1];
+      //   arr[1] = arr[2];
+      //   arr[2] = temp;
+      // }
+      console.log(arr);
+    }
+    sort([6, 7, 3, 6, 8]);
+  </script>
+</body>
+
+</html>

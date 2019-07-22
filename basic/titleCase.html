@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>titleCase</title>
+</head>
+
+<body>
+  <script>
+    // function titleCase(str) {
+    //   var splited = str.split(" ");
+    //   for (var i = 0; i < splited.length; i++) {
+    //     console.log(splited[i]);
+    //     console.log(splited[i].charAt(0).toUpperCase() + splited[i].slice(1));
+    //   }
+    // }
+    // titleCase("I'm a little tea pot");
+  </script>
+  <script>
+    // function titleCase(str) {
+    //   var words = str.split(" ");
+    //   for (var i = 0; i <= words.length; i++) {
+    //     words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+    //     console.log(words[i]);
+    //   }
+    //   return words.join(" ");
+    // }
+    // titleCase("I'm a little tea pot")
+    function titleCase(str) {
+      var titled = str.toLowerCase().split(" ").map(function (elem) {
+        return elem[0].toUpperCase() + elem.slice(1)
+      })
+      console.log(titled.join(" "));
+    }
+    titleCase("I'm a little tea pot")
+  </script>
+</body>
+
+</html>

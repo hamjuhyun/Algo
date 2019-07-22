@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>선형탐색 알고리즘</title>
+</head>
+
+<body>
+  <script>
+    function linearSearch(elem, list) {
+      var index;
+      for (var i = 0; i < list.length; i++) {
+        if (list[i] === elem) {
+          console.log(list.indexOf(elem));
+        }
+      }
+    }
+    linearSearch(2, [3, 5, 7, 2, 11])
+    linearSearch(0, [3, 5, 7, 2, 11])
+    linearSearch(5, [3, 5, 7, 2, 11])
+    linearSearch(11, [3, 5, 7, 2, 11])
+  </script>
+</body>
+
+</html>

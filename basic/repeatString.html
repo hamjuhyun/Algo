@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>repeat String</title>
+</head>
+
+<body>
+  <script>
+    //방법1
+    // function repeatStringNumTimes(str, num) {
+    //   var finalWord = "";
+    //   for (var i = 0; i < num; i++) {
+    //     // console.log(str += str[str.length]);
+    //     finalWord += str;
+    //   }
+    //   console.log(finalWord);
+    // }
+    // repeatStringNumTimes('abc', 7)
+    //방법2
+    function repeatStringNumTimes(str, num) {
+      if (num < 0) return;
+      if (num === 1) return str;
+      return str + repeatStringNumTimes(str, num - 1);
+    }
+    repeatStringNumTimes('ham', 5)
+  </script>
+</body>
+
+</html>
